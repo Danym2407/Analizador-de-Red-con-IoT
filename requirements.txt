@@ -7,3 +7,5 @@ psutil
 plotly
 pandas
 flask_sqlalchemy
+python-dotenv
+python-nmap
