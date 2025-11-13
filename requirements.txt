@@ -1,0 +1,9 @@
+Flask
+openai
+speedtest-cli
+scapy
+requests
+psutil
+plotly
+pandas
+flask_sqlalchemy

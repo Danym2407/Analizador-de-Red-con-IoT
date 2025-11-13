@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="{{ url_for('static', filename='js/ibero2.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<div class="container-fluid d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <!-- Contenedor del mapa 3D -->
+    <div class="row w-100 justify-content-center">
+        <div id="model-container" class="col-12 col-md-8 col-lg-6">
+            <h1 id="heading" class="text-center">IBERO RED</h1>
+        </div>
+    </div>
+
+    <!-- Menú de opciones -->
+    <div id="menu-container" class="d-flex flex-wrap justify-content-center mt-4">
+        <button class="menu-btn" onclick="handleMenuClick('A1-PB')">A1-PB</button>
+        <button class="menu-btn" onclick="handleMenuClick('A1-N1')">A1-N1</button>
+        <button class="menu-btn" onclick="handleMenuClick('A1-N2')">A1-N2</button>
+        <button class="menu-btn" onclick="handleMenuClick('A2-PB')">A2-PB</button>
+        <button class="menu-btn" onclick="handleMenuClick('A2-N1')">A2-N1</button>
+        <button class="menu-btn" onclick="handleMenuClick('A2-N2')">A2-N2</button>
+        <button class="menu-btn" onclick="handleMenuClick('C-PB')">C-PB</button>
+        <button class="menu-btn" onclick="handleMenuClick('C-N1')">C-N1</button>
+        <button class="menu-btn" onclick="handleMenuClick('C-N2')">C-N2</button>
+    </div>
+
+    <!-- Contenedor de progreso -->
+    <div id="progress-container" class="d-flex justify-content-center align-items-center">
+        <p id="progress">Cargando mapa 3D...</p>
+    </div>
+
+    <!-- Burbuja del chatbot -->
+    <div class="chat-bubble" onclick="toggleChat()">
+        💬
+    </div>
+
+    <!-- Contenedor del chatbot -->
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            Nibble
+            <button class="close-chat" onclick="toggleChat()">×</button>
+        </div>
+        <div id="chat-body" class="chat-body">
+            <!-- Mensajes se agregarán dinámicamente -->
+        </div>
+        <div id="chat-input">
+            <input type="text" id="message-box" placeholder="Escribe un mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Agregar librerías de Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+</div>
+{% endblock %}

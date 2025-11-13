@@ -1,0 +1,135 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/*---------------HEADER------------------*/
+header{
+  background-color: #E0051C;
+}
+
+.header-text {
+  margin-left: 55px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 35px;
+  margin-right: 20px;
+  background-color: transparent;
+  border: none; 
+  cursor: pointer;
+  padding: 0; 
+  width: 60px; 
+  height: 60px;
+}
+
+.logo-ibero {
+  margin-left: 15px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: none; 
+  cursor: pointer;
+  padding: 0; 
+  width: 100px; 
+  height: 60px;
+}
+/*-------------------BOTONES--------------------*/
+#side-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 40;
+}
+
+#side-container button {
+  width: 120px;
+  padding: 10px;
+  background-color: #E0051C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+#side-container button:hover {
+  transform: scale(1.1);
+  background-color: #D0041A;
+}
+
+
+
+
+
+
+/*---------------CONTENEDORES------------------*/
+#container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Se mantiene la altura total de la ventana */
+}
+
+#model-container {
+  flex: 1;
+  background-color: white; /* Fondo blanco del contenedor del modelo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alineación al principio */
+  align-items: center; /* Alineación horizontal */
+  position: relative; /* Esto es importante para posicionar el progreso en el área del contenedor */
+  height: 100%; /* Asegura que tome todo el espacio vertical */
+  width: 100%; /* Asegura que tome todo el espacio horizontal */
+}
+
+canvas {
+  width: 100% !important; /* Elimina restricciones */
+  height: 100% !important;
+  display: block;
+}
+
+
+#heading {
+  font-size: 1.2em; /* Hacer el tamaño más pequeño */
+  color: #111;
+  position: absolute;
+  top: 10px; /* Distancia desde la parte superior */
+  text-align: center;
+  z-index: 10;
+}
+
+/*---------------ESPERA CARGAR MODELO------------------*/
+#progress-container {
+  position: absolute; /* Lo posicionamos dentro de #model-container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: rgba(224, 224, 224, 0.6); /* Fondo oscuro translúcido */
+  color: black;
+  font-size: 2em; /* Tamaño de texto grande */
+  z-index: 20; /* Asegura que esté por encima del modelo */
+}
+
+#progress {
+  text-align: center;
+}

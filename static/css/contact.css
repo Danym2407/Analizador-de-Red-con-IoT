@@ -1,0 +1,116 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+h1, h3 {
+    color: #d9534f;
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 50px;
+}
+
+/* Estilos para el encabezado */
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #d9534f;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Información de contacto y Formulario */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch; /* Asegura que los elementos se estiren */
+}
+
+.contact-info,
+.form-contact {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos dentro se distribuyan bien */
+}
+
+.contact-info h3,
+.form-contact h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Centra los títulos */
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    color: #d9534f;
+}
+
+.form-contact .form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-contact .form-control:focus {
+    border-color: #d9534f;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5);
+}
+
+.btn-submit {
+    background-color: #d9534f;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón */
+}
+
+.btn-submit:hover {
+    background-color: #c9302c;
+}
+
+/* Mapa de ubicación */
+#map {
+    margin-top: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efectos de animación para los elementos */
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
